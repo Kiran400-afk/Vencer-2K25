@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Web Wizards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../images/cse_bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-family: 'Cinzel Decorative', cursive;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #d4af37;
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .event-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .event-title {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .event-poster {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 15px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            border: 2px solid #d4af37;
+        }
+
+        .event-section {
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid #d4af37;
+        }
+
+        .section-title {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.8rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .rules-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .rules-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .rules-list li::before {
+            content: '•';
+            color: #d4af37;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .register-button {
+            background: #d4af37;
+            color: #000;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .register-button:hover {
+            background: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .register-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="events.html">EVENTS</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+    <div class="content-container">
+        <div class="event-header">
+            <h1 class="event-title">Web Wizards</h1>
+            <p class="section-content">Create innovative and responsive web applications using modern technologies</p>
+        </div>
+
+        <img src="../images/web_dev.jpg" alt="Web Wizards Event Poster" class="event-poster">
+
+        <div class="event-section">
+            <h2 class="section-title">Event Description</h2>
+            <p class="section-content">
+                Web Wizards is an exciting web development competition where participants showcase their skills in creating
+                modern, responsive, and innovative web applications. This is your opportunity to demonstrate your mastery
+                of front-end and back-end technologies while solving real-world problems through web solutions.
+            </p>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Rules & Guidelines</h2>
+            <ul class="rules-list">
+                <li>Teams of 2-3 members allowed</li>
+                <li>Duration: 24 hours</li>
+                <li>Participants must create a fully functional web application</li>
+                <li>Use of any web development framework is allowed</li>
+                <li>Project must be responsive and cross-browser compatible</li>
+                <li>Code must be original and plagiarism will lead to disqualification</li>
+                <li>Teams must present their project to the judges</li>
+                <li>Projects will be judged on innovation, design, and functionality</li>
+            </ul>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Prize Pool</h2>
+            <p class="section-content">
+                🏆 First Prize: ₹15,000 + Certificates<br>
+                🥈 Second Prize: ₹10,000 + Certificates<br>
+                🥉 Third Prize: ₹7,000 + Certificates<br>
+                🎖️ Special mention awards for Best UI/UX and Most Innovative Solution
+            </p>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Important Details</h2>
+            <p class="section-content">
+                📅 Date: April 16-17, 2025<br>
+                ⏰ Time: Starts at 10:00 AM<br>
+                📍 Venue: Innovation Hub, Block B<br>
+                💻 Requirements: Laptop with development tools installed<br>
+                🌐 Internet access will be provided
+            </p>
+        </div>
+
+        <div class="register-container">
+            <a href="https://forms.google.com/web-dev-register" class="register-button">Register Now</a>
+        </div>
+    </div>
+</body>
+</html>

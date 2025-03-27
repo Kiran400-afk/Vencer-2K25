@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - VENCER 2K25</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url('../images/vencer_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        .content {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            min-height: 100vh;
+        }
+
+        .page-title {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 3rem;
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .departments-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 5%;
+        }
+
+        .department {
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .department h2 {
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Cinzel Decorative', cursive;
+        }
+
+        .coordinator-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .coordinator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .coordinator-name {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .coordinator-phone {
+            color: #d4af37;
+            font-size: 1rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.35));
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 40px auto;
+            font-family: 'Cinzel Decorative', cursive;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(5px);
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .back-button:hover {
+            transform: translateX(-50%) translateY(-5px);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.45));
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="events.html">EVENTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="page-title">Contact Our Coordinators</h1>
+        <div class="departments-container">
+            <div class="department">
+                <h2>CSE</h2>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">John Smith</div>
+                    <div class="coordinator-phone">+91 9876543210</div>
+                </div>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Sarah Johnson</div>
+                    <div class="coordinator-phone">+91 9876543211</div>
+                </div>
+            </div>
+
+            <div class="department">
+                <h2>ECE</h2>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Michael Chen</div>
+                    <div class="coordinator-phone">+91 9876543212</div>
+                </div>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Emily Wang</div>
+                    <div class="coordinator-phone">+91 9876543213</div>
+                </div>
+            </div>
+
+            <div class="department">
+                <h2>EEE</h2>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">David Wilson</div>
+                    <div class="coordinator-phone">+91 9876543214</div>
+                </div>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Lisa Brown</div>
+                    <div class="coordinator-phone">+91 9876543215</div>
+                </div>
+            </div>
+
+            <div class="department">
+                <h2>MECH</h2>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Robert Taylor</div>
+                    <div class="coordinator-phone">+91 9876543216</div>
+                </div>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Emma Davis</div>
+                    <div class="coordinator-phone">+91 9876543217</div>
+                </div>
+            </div>
+
+            <div class="department">
+                <h2>CIVIL</h2>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">James Anderson</div>
+                    <div class="coordinator-phone">+91 9876543218</div>
+                </div>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Sophie Martinez</div>
+                    <div class="coordinator-phone">+91 9876543219</div>
+                </div>
+            </div>
+
+            <div class="department">
+                <h2>AI&DS</h2>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Daniel Lee</div>
+                    <div class="coordinator-phone">+91 9876543220</div>
+                </div>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Rachel Kim</div>
+                    <div class="coordinator-phone">+91 9876543221</div>
+                </div>
+            </div>
+
+            <div class="department">
+                <h2>ROBOTICS</h2>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Alex Thompson</div>
+                    <div class="coordinator-phone">+91 9876543222</div>
+                </div>
+                <div class="coordinator-card">
+                    <div class="coordinator-name">Olivia Garcia</div>
+                    <div class="coordinator-phone">+91 9876543223</div>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
+   
