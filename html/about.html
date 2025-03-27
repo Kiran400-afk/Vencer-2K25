@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>About - VENCER 2025</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(40, 40, 40, 0.95));
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.2));
+            pointer-events: none;
+            z-index: -1;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes titleGlow {
+            from {
+                text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+            }
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .content-container {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .college-info {
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .developer-card {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: calc(var(--card-index) * 0.2s);
+        }
+
+        .section-title {
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        .skill-tag {
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+        max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(212, 175, 55, 0.15);
+            text-align: center;
+            transform: perspective(1000px) rotateX(0deg);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .college-info:hover {
+            transform: perspective(1000px) rotateX(2deg);
+            box-shadow: 0 8px 35px rgba(212, 175, 55, 0.25);
+        }
+
+        .college-info h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            animation: titleGlow 2s ease-in-out infinite alternate, textReveal 1.5s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes textReveal {
+            0% {
+                clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                transform: translateY(20px);
+            }
+            100% {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                transform: translateY(0);
+            }
+        }
+
+        .college-info h2::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+            animation: shimmer 2s infinite;
+            transform: translateX(-100%);
+        }
+
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .college-info h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            animation: titleGlow 2s ease-in-out infinite alternate, textReveal 1.5s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 0 5px rgba(212, 175, 55, 0.2); }
+            to { text-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        }
+
+        .accreditation {
+            color: #666;
+            font-style: italic;
+            margin: 15px 0;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 0.8s ease 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.8;
+            margin: 25px 0;
+            text-align: justify;
+            padding: 0 20px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease 0.6s forwards;
+        }
+
+        .website-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.3));
+            color: #333;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .website-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.4));
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .events-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.35));
+            color: #333;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 40px auto;
+            font-family: 'Cinzel Decorative', cursive;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .events-button:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.45));
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .developer-card {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(42, 42, 42, 0.9));
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+        }
+
+        .developer-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .developer-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid #d4af37;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            transform: translateZ(20px);
+        }
+
+        .developer-card:hover .developer-image {
+            transform: translateZ(30px) scale(1.05);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .developer-name {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            transform: translateZ(15px);
+        }
+
+        .developer-role {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            transform: translateZ(10px);
+        }
+
+        .developer-bio {
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            transform: translateZ(5px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            transform: translateZ(10px);
+        }
+
+        .social-links a {
+            color: #d4af37;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+            transform: translateY(-3px);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+            transform: translateZ(5px);
+        }
+
+        .skill-tag {
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('../images/collage.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            animation: gradientPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes gradientPulse {
+            0%, 100% { background-color: rgba(0,0,0,0.5); }
+            50% { background-color: rgba(0,0,0,0.7); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.5s;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .college-info {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: url('../images/collage.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(212, 175, 55, 0.15);
+            text-align: center;
+            transform: perspective(1000px) rotateX(0deg);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .college-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            z-index: 0;
+        }
+
+        .college-info > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .college-info:hover {
+            transform: perspective(1000px) rotateX(2deg);
+            box-shadow: 0 8px 35px rgba(212, 175, 55, 0.25);
+        }
+
+        .college-info h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            animation: titleGlow 2s ease-in-out infinite alternate, textReveal 1.5s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes textReveal {
+            0% {
+                clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                transform: translateY(20px);
+            }
+            100% {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                transform: translateY(0);
+            }
+        }
+
+        .college-info h2::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+            animation: shimmer 2s infinite;
+            transform: translateX(-100%);
+        }
+
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .college-info h2 {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            animation: titleGlow 2s ease-in-out infinite alternate, textReveal 1.5s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 0 5px rgba(212, 175, 55, 0.2); }
+            to { text-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        }
+
+        .accreditation {
+            color: #666;
+            font-style: italic;
+            margin: 15px 0;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 0.8s ease 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.8;
+            margin: 25px 0;
+            text-align: justify;
+            padding: 0 20px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease 0.6s forwards;
+        }
+
+        .website-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.3));
+            color: #333;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .website-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.4));
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .events-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.35));
+            color: #333;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 40px auto;
+            font-family: 'Cinzel Decorative', cursive;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .events-button:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.45));
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .developer-card {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(42, 42, 42, 0.9));
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+        }
+
+        .developer-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .developer-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid #d4af37;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            transform: translateZ(20px);
+        }
+
+        .developer-card:hover .developer-image {
+            transform: translateZ(30px) scale(1.05);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .developer-name {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            transform: translateZ(15px);
+        }
+
+        .developer-role {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            transform: translateZ(10px);
+        }
+
+        .developer-bio {
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            transform: translateZ(5px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            transform: translateZ(10px);
+        }
+
+        .social-links a {
+            color: #d4af37;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+            transform: translateY(-3px);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+            transform: translateZ(5px);
+        }
+
+        .skill-tag {
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('../images/collage.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(212,175,55,0.2));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Cinzel Decorative', cursive;
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer a {
+            color: #d4af3728;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .back-to-home {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.3));
+            color: #333;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(5px);
+            font-family: 'Cinzel Decorative', cursive;
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.4));
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2));
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="events.html">EVENTS</a>
+            <a href="about.html">ABOUT</a>
+
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">About VENCER 2025</h1>
+            <p class="hero-subtitle">Welcome to VENCER 2025, where innovation meets celebration. Join us for an unforgettable experience of technology, culture, and entertainment.</p>
+        </div>
+    </section>
+</body>
+</html>
+
+    <div class="college-info">
+        
+        <h2>Angadi Institute Of Technology & Management</h2>
+        <p class="accreditation">
+            APPROVED BY AICTE, New Delhi<br>
+            AFFILIATED TO Visvesvaraya Technology University, Belagavi<br>
+            ACCREDITED BY NBA & NAAC
+        </p>
+        <p class="description">
+            AITM stands as a symbol of educational excellence, inspiring students to reach new heights, encouraging them to embrace the endless possibilities that engineering has to offer and providing a holistic learning environment that nurtures student's overall development.
+        </p>
+        <a href="https://aitmbgm.ac.in/" class="website-button" target="_blank">Visit Website</a>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="events.html" class="events-button">View Events</a>
+    </div>
+
+    <div class="developers-section">
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="developers-container">
+            <div class="developer-card">
+                <img src="../images/dev1.jpg" alt="Developer 1" class="developer-image">
+                <h3 class="developer-name">Developer Name 1</h3>
+                <p class="developer-role">Lead Developer</p>
+                <p class="developer-bio">Passionate about creating innovative web experiences and pushing the boundaries of modern web development.</p>
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <img src="../images/dev2.jpg" alt="Developer 2" class="developer-image">
+                <h3 class="developer-name">Developer Name 2</h3>
+                <p class="developer-role">UI/UX Designer</p>
+                <p class="developer-bio">Creative designer with a keen eye for detail and a passion for creating beautiful, user-friendly interfaces.</p>
+                <div class="skills">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Adobe XD</span>
+                    <span class="skill-tag">UI Design</span>
+                    <span class="skill-tag">Prototyping</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <img src="../images/dev3.jpg" alt="Developer 3" class="developer-image">
+                <h3 class="developer-name">Developer Name 3</h3>
+                <p class="developer-role">Backend Developer</p>
+                <p class="developer-bio">Experienced in building robust and scalable backend systems with a focus on performance and security.</p>
+                <div class="skills">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">AWS</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <img src="../images/dev4.jpg" alt="Developer 4" class="developer-image">
+                <h3 class="developer-name">Developer Name 4</h3>
+                <p class="developer-role">Full Stack Developer</p>
+                <p class="developer-bio">Versatile developer with expertise in both frontend and backend technologies, creating seamless web applications.</p>
+                <div class="skills">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-dev"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 VENCER. All rights reserved.</p>
+            <p>Angadi Institute Of Technology & Management, Belagavi</p>
+            <p>Contact: <a href="mailto:contact@vencer.com">contact@vencer.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+    </div>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+</body>
+</html>

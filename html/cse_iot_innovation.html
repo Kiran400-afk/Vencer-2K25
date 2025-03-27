@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE IoT Innovation Challenge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../images/cse_bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-family: 'Cinzel Decorative', cursive;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #d4af37;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #d4af37;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+        }
+
+        .register-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: #d4af37;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #b4941f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="events.html">EVENTS</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+    <div class="content">
+        <h1>IoT Innovation Challenge</h1>
+
+        <div class="section">
+            <h2>Event Description</h2>
+            <p>Showcase your IoT development skills by creating innovative solutions for real-world problems. This competition challenges participants to build smart, connected devices and systems.</p>
+        </div>
+
+        <div class="section">
+            <h2>Rules</h2>
+            <ul>
+                <li>Teams of 2-4 members are allowed</li>
+                <li>Duration: 12 hours</li>
+                <li>Participants must bring their own hardware components</li>
+                <li>Basic sensors and microcontrollers will be provided</li>
+                <li>Projects must be original and created during the event</li>
+                <li>Cloud connectivity is mandatory</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Requirements</h2>
+            <ul>
+                <li>Knowledge of IoT protocols (MQTT, CoAP)</li>
+                <li>Experience with microcontrollers (Arduino/ESP32)</li>
+                <li>Basic electronics understanding</li>
+                <li>Cloud platform familiarity (AWS IoT, Azure IoT)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Judging Criteria</h2>
+            <ul>
+                <li>Innovation and practicality (35%)</li>
+                <li>Technical implementation (25%)</li>
+                <li>Connectivity and data handling (20%)</li>
+                <li>Project presentation (20%)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Prize Pool</h2>
+            <ul>
+                <li>1st Place: ₹30,000</li>
+                <li>2nd Place: ₹20,000</li>
+                <li>3rd Place: ₹10,000</li>
+            </ul>
+        </div>
+
+        <a href="https://forms.gle/YourIoTFormLink" class="register-btn" target="_blank">Register Now</a>
+    </div>
+</body>
+</html>

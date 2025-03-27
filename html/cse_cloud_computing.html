@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Cloud Computing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../images/cse_bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-family: 'Cinzel Decorative', cursive;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #d4af37;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #d4af37;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+        }
+
+        .register-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: #d4af37;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #b4941f;
+            transform: scale(1.05);
+        }
+
+        .coordinators {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .coordinator {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .back-btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            background: transparent;
+            color: #d4af37;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="events.html">EVENTS</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+    <div class="container">
+        <div class="event-header">
+            <h1 class="event-title">Cloud Computing Challenge</h1>
+        </div>
+
+        <div class="event-poster">
+            <img src="../images/cloud_computing.jpg" alt="Cloud Computing Event Poster">
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Event Description</h2>
+            <div class="section-content">
+                <p>Demonstrate your expertise in cloud computing by designing and implementing scalable cloud solutions. This competition challenges participants to create efficient and innovative cloud-native applications.</p>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Rules</h2>
+            <div class="section-content">
+                <ul>
+                <li>Teams of 2-4 members are allowed</li>
+                <li>Duration: 8 hours</li>
+                <li>Participants must bring their own laptops</li>
+                <li>AWS/Azure/GCP free tier accounts required</li>
+                <li>Use of third-party services is allowed with documentation</li>
+                <li>Solutions must be original and created during the event</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Prizes</h2>
+            <div class="section-content">
+                <p>🏆 First Prize: Rs. 10,000</p>
+                <p>🥈 Second Prize: Rs. 7,000</p>
+                <p>🥉 Third Prize: Rs. 5,000</p>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Coordinators</h2>
+            <div class="coordinators">
+                <div class="coordinator">
+                    <h3>Rahul Kumar</h3>
+                    <p>📞 +91 9876543210</p>
+                </div>
+                <div class="coordinator">
+                    <h3>Priya Sharma</h3>
+                    <p>📞 +91 9876543211</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Requirements</h2>
+            <div class="section-content">
+                <ul>
+                <li>Knowledge of cloud platforms (AWS/Azure/GCP)</li>
+                <li>Understanding of containerization (Docker)</li>
+                <li>Experience with cloud-native development</li>
+                <li>Basic DevOps knowledge</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Prizes</h2>
+            <div class="section-content">
+                <p>🏆 First Prize: Rs. 10,000</p>
+                <p>🥈 Second Prize: Rs. 7,000</p>
+                <p>🥉 Third Prize: Rs. 5,000</p>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Coordinators</h2>
+            <div class="coordinators">
+                <div class="coordinator">
+                    <h3>Rahul Kumar</h3>
+                    <p>📞 +91 9876543210</p>
+                </div>
+                <div class="coordinator">
+                    <h3>Priya Sharma</h3>
+                    <p>📞 +91 9876543211</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Judging Criteria</h2>
+            <div class="section-content">
+                <ul>
+                <li>Architecture design (35%)</li>
+                <li>Scalability and performance (25%)</li>
+                <li>Security implementation (20%)</li>
+                <li>Cost optimization (20%)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Prizes</h2>
+            <div class="section-content">
+                <p>🏆 First Prize: Rs. 10,000</p>
+                <p>🥈 Second Prize: Rs. 7,000</p>
+                <p>🥉 Third Prize: Rs. 5,000</p>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Coordinators</h2>
+            <div class="coordinators">
+                <div class="coordinator">
+                    <h3>Rahul Kumar</h3>
+                    <p>📞 +91 9876543210</p>
+                </div>
+                <div class="coordinator">
+                    <h3>Priya Sharma</h3>
+                    <p>📞 +91 9876543211</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Prize Pool</h2>
+            <ul>
+                <li>1st Place: ₹20,000</li>
+                <li>2nd Place: ₹12,000</li>
+                <li>3rd Place: ₹8,000</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Prizes</h2>
+            <div class="section-content">
+                <p>🏆 First Prize: Rs. 10,000</p>
+                <p>🥈 Second Prize: Rs. 7,000</p>
+                <p>🥉 Third Prize: Rs. 5,000</p>
+            </div>
+        </div>
+
+        <div class="event-section">
+            <h2 class="section-title">Coordinators</h2>
+            <div class="coordinators">
+                <div class="coordinator">
+                    <h3>Rahul Kumar</h3>
+                    <p>📞 +91 9876543210</p>
+                </div>
+                <div class="coordinator">
+                    <h3>Priya Sharma</h3>
+                    <p>📞 +91 9876543211</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Event Coordinators</h2>
+            <div class="coordinators">
+                <div class="coordinator">
+                    <h3>Arun Kumar</h3>
+                    <p>📞 +91 9876543210</p>
+                </div>
+                <div class="coordinator">
+                    <h3>Priya Patel</h3>
+                    <p>📞 +91 9876543211</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://forms.gle/YourCloudComputingFormLink" class="register-btn" target="_blank">Register Now</a>
+        <a href="cse_events.html" class="back-btn">Back to Events</a>
+    </div>
+</body>
+</html>
